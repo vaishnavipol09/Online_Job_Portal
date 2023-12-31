@@ -1,7 +1,19 @@
 export default [
     {
+        id:1,
+        postedOn:"2023-12-20",
+        title:"Frontend Developer",
+        company:"Accenture",
+        type:"Full Time",
+        experience:"Entry Level",
+        location:"Onsite",
+        skills:["HTML" , "CSS" , "JavaScript" , "ReactJS"],
+        job_link: "https://www.accenture.com/in-en"
+    },
+
+    {
         id:2,
-        postedOn:"2023-12-29",
+        postedOn:"2023-12-23",
         title:"Backend Developer",
         company:"TCS",
         type:"Full Time",
@@ -12,8 +24,8 @@ export default [
     },
 
     {
-        id:1,
-        postedOn:"2023-12-29",
+        id:3,
+        postedOn:"2023-12-15",
         title:"Full stack Developer",
         company:"Infosys",
         type:"Full Time",
@@ -37,7 +49,7 @@ export default [
 
     {
         id:5,
-        postedOn:"2023-12-29",
+        postedOn:"2023-12-6",
         title:"Data Science",
         company:"Amdocs",
         type:"Full Time",
@@ -49,7 +61,7 @@ export default [
 
     {
         id:6,
-        postedOn:"2023-12-29",
+        postedOn:"2023-12-22",
         title:"HR Manager",
         company:"HCL",
         type:"Contract",
