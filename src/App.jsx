@@ -11,12 +11,18 @@ function App() {
   const [jobs, setJobs] = useState([]);
 
   const fetchJobs = async() =>{
+    const tempJobs = []
     const q = query(collection(db, "jobs"));
     const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) =>{
+    querySnapshot.forEach((job) =>{
       //doc.data() is never undefined for query docs snapshots
-      console.log(doc.id, "=>" , doc.data());
+      //console.log(doc.id, "=>" , doc.data());
+      tempJobs.push({
+        ...job.data(),
+        id: job.id
+      })
     })
+    setJobs(tempJobs)
   }
 
   useEffect(() =>{
@@ -29,7 +35,7 @@ function App() {
       <Navbar />
       <Header />
       <SearchBar />
-      {JobData.map((job)=>(
+      {jobs.map((job)=>(
         <JobCard key={job.id} {...job}/>
       ))}
     </>
